@@ -4,11 +4,11 @@ import { useStateCallback } from "./useStateCallback";
 function UseStateCallbackExample({ startCountAt, callbackFn }) {
   const [counter, setCounter] = useStateCallback(startCountAt);
 
-  const handleIncrementCounter = React.useCallback(() => {
+  const handleIncrementCounter = () => {
     const increment = (value) => value + 1;
 
     setCounter(increment(counter), callbackFn);
-  }, [counter]);
+  };
 
   return (
     <div>
