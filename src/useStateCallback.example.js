@@ -5,8 +5,9 @@ function UseStateCallbackExample({ startCountAt, callbackFn }) {
   const [counter, setCounter] = useStateCallback(startCountAt);
 
   const handleIncrementCounter = React.useCallback(() => {
-    const value = counter + 1;
-    setCounter(value, callbackFn);
+    const increment = (value) => value + 1;
+
+    setCounter(increment(counter), callbackFn);
   }, [counter]);
 
   return (
