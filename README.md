@@ -6,6 +6,18 @@ useStateCallback is an simple abstraction of React's useState, useEffect and use
 
 I have made this simple abstraction in a custom hook, because I think it makes the code cleaner and readable for me.
 
+## Installing
+
+```
+$ yarn add use-state-callback
+```
+
+or
+
+```
+$ npm install use-state-callback
+```
+
 ## Usage
 
 ```
