@@ -2,7 +2,7 @@ import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 
-import Example from "../useStateCallback.example";
+import Example from "./useStateCallback.example";
 
 describe("useStateCallback.js", () => {
   it("should fire cb after state has changed", () => {
