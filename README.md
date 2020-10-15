@@ -4,9 +4,11 @@ useStateCallback is an simple abstraction of React's useState, useEffect and use
 
 ## Reasoning
 
-I have made this simple abstraction in a custom hook, because I think it makes the code cleaner and readable for me.
+I think this abstraction makes the code cleaner and readable.
 
 ## Installing
+
+You can install it using yarn or npm as you'd like:
 
 ```
 $ yarn add use-state-callback
@@ -20,7 +22,7 @@ $ npm install use-state-callback
 
 ## Usage
 
-The callback function will be called with the state update value as single parameter. So you can use a function reference a function or an anonymous function as second argument.
+The callback function will be called with the state update value as single parameter. So you can use a function reference or an anonymous function as second argument of the dispatcher function.
 
 Function reference:
 
