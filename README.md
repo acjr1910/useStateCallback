@@ -2,9 +2,9 @@
 
 useStateCallback is an simple abstraction of React's useState, useEffect and useRef hooks putted all together.
 
-## Reasoning
+## Why?
 
-I think this abstraction makes the code cleaner and readable.
+I think this abstraction makes the code cleaner, readable, and automates the useState/useEffect set up in some cases.
 
 ## Installing
 
