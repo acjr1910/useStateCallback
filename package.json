@@ -1,6 +1,6 @@
 {
   "name": "use-state-callback",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "useState hook with callback",
   "main": "./lib/useStateCallback.js",
   "author": "Agnaldo Cardoso Junior",
