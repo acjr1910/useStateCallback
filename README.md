@@ -24,42 +24,44 @@ The callback function will be called with the state update value as single param
 
 Function reference:
 
-```
-import { useStateCallback } from 'use-state-callback';
+```js
+import { useStateCallback } from "use-state-callback";
 
 function AwesomeComponent() {
-	const [counter, setCounter] = useStateCallback(0);
+  const [counter, setCounter] = useStateCallback(0);
 
-	function consoleCounterValue(updatedState) {
-		console.log(`counter is on ${updatedState} now`);
-	}
+  function consoleCounterValue(updatedState) {
+    console.log(`counter is on ${updatedState} now`);
+  }
 
-	function handleClick() {
-		const increment = (value) => value + 1;
-		setCounter(increment(counter), consoleCounterValue);
-	}
+  function handleClick() {
+    const increment = (value) => value + 1;
+    setCounter(increment(counter), consoleCounterValue);
+  }
 
-	render(<button onClick={handleClick}>Increment</button>);
+  render(<button onClick={handleClick}>Increment</button>);
 }
 ```
 
 Anonymous Function:
 
-```
-import { useStateCallback } from 'use-state-callback';
+```js
+import { useStateCallback } from "use-state-callback";
 
 function AwesomeComponent() {
-	const [counter, setCounter] = useStateCallback(0);
+  const [counter, setCounter] = useStateCallback(0);
 
-	function consoleCounterValue(value) {
-		console.log(`counter is now on ${value}`);
-	}
+  function consoleCounterValue(value) {
+    console.log(`counter is now on ${value}`);
+  }
 
-	function handleClick() {
-		const increment = (value) => value + 1;
-		setCounter(increment(counter), updatedState => console.log(`counter is on ${updatedState} now`));
-	}
+  function handleClick() {
+    const increment = (value) => value + 1;
+    setCounter(increment(counter), (updatedState) =>
+      console.log(`counter is on ${updatedState} now`)
+    );
+  }
 
-	render(<button onClick={handleClick}>Increment</button>);
+  render(<button onClick={handleClick}>Increment</button>);
 }
 ```
