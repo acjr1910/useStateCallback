@@ -5,6 +5,10 @@
   "main": "./lib/useStateCallback.js",
   "author": "Agnaldo Cardoso Junior",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ajnior/useStateCallback.git"
+  },
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
