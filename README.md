@@ -20,10 +20,35 @@ $ npm install use-state-callback
 
 ## Usage
 
+The callback function will be called with the state update value as single parameter. So you can use a function reference a function or an anonymous function as second argument.
+
+Function reference:
+
 ```
 import { useStateCallback } from 'use-state-callback';
 
-function Component() {
+function AwesomeComponent() {
+	const [counter, setCounter] = useStateCallback(0);
+
+	function consoleCounterValue(updatedState) {
+		console.log(`counter is on ${updatedState} now`);
+	}
+
+	function handleClick() {
+		const increment = (value) => value + 1;
+		setCounter(increment(counter), consoleCounterValue);
+	}
+
+	render(<button onClick={handleClick}>Increment</button>);
+}
+```
+
+Anonymous Function:
+
+```
+import { useStateCallback } from 'use-state-callback';
+
+function AwesomeComponent() {
 	const [counter, setCounter] = useStateCallback(0);
 
 	function consoleCounterValue(value) {
@@ -32,7 +57,7 @@ function Component() {
 
 	function handleClick() {
 		const increment = (value) => value + 1;
-		setCounter(increment(counter), consoleCounterValue);
+		setCounter(increment(counter), updatedState => console.log(`counter is on ${updatedState} now`));
 	}
 
 	render(<button onClick={handleClick}>Increment</button>);
