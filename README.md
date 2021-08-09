@@ -1,11 +1,3 @@
-# useStateCallback
-
-useStateCallback is an simple abstraction of React's useState, useEffect and useRef hooks putted all together.
-
-## Why?
-
-I think this abstraction makes the code cleaner, readable, and automates the useState/useEffect set up in some cases.
-
 ## Installing
 
 You can install it using yarn or npm as you'd like:
